@@ -1,6 +1,8 @@
 import { useMemo } from 'react'
 import { CodeBlock } from './CodeBlock'
 import { Callout } from './Callout'
+import { LessonImage } from './LessonImage'
+import { LessonVideo } from './LessonVideo'
 
 export function LessonContent({ content }) {
   const renderedContent = useMemo(() => {
@@ -51,6 +53,36 @@ function parseContent(content) {
 
     if (inCodeBlock) {
       codeContent.push(line)
+      currentIndex++
+      continue
+    }
+
+    // Check for image tags: <image src="..." alt="..." caption="..." />
+    const imageMatch = line.trim().match(/<image\s+src="([^"]+)"(?:\s+alt="([^"]*)")?(?:\s+caption="([^"]*)")?\s*\/>/)
+    if (imageMatch) {
+      elements.push(
+        <LessonImage
+          key={`image-${currentIndex}`}
+          src={imageMatch[1]}
+          alt={imageMatch[2] || ''}
+          caption={imageMatch[3] || ''}
+        />
+      )
+      currentIndex++
+      continue
+    }
+
+    // Check for video tags: <video src="..." poster="..." caption="..." />
+    const videoMatch = line.trim().match(/<video\s+src="([^"]+)"(?:\s+poster="([^"]*)")?(?:\s+caption="([^"]*)")?\s*\/>/)
+    if (videoMatch) {
+      elements.push(
+        <LessonVideo
+          key={`video-${currentIndex}`}
+          src={videoMatch[1]}
+          poster={videoMatch[2] || ''}
+          caption={videoMatch[3] || ''}
+        />
+      )
       currentIndex++
       continue
     }
@@ -207,7 +239,6 @@ function findClosingTag(lines, startIndex, tag) {
 
 function renderInlineFormatting(text) {
   const parts = []
-  let remaining = text
   let keyIndex = 0
 
   // Process inline code, bold, links, etc.
@@ -303,4 +334,3 @@ function renderTable(lines) {
     </>
   )
 }
-

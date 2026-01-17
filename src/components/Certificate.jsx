@@ -173,3 +173,4 @@ export function Certificate({ name, completedAt, onClose }) {
   )
 }
 
+

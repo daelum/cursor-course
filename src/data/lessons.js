@@ -70,6 +70,8 @@ Cursor is where all the magic happens. It's a free application that runs on your
 ### Step 1: Go to the Cursor Website
 Open your web browser and visit: **cursor.com**
 
+<image src="/images/cursor-download.png" alt="Cursor download page" caption="The Cursor download page - just click Download" />
+
 ### Step 2: Download Cursor
 Click the download button. It will automatically detect if you're on Mac or Windows.
 
@@ -87,6 +89,8 @@ When Cursor opens for the first time, it may ask you to sign in or create an acc
 ## Don't Be Scared by What You See!
 
 When Cursor opens, you might think: "Whoa, this looks complicated!"
+
+<image src="/images/cursor-empty-state.png" alt="Cursor empty state" caption="This is what Cursor looks like when you first open it - don't worry, you'll only use a small part of it" />
 
 **That's totally normal.** It looks like a developer's workspace because that's what it is. But here's the secret:
 
@@ -115,6 +119,8 @@ When you speak your ideas instead of typing:
 ### Step 1: Go to DeepFlo.App
 Open your browser and visit: **deepflo.app**
 
+<image src="/images/deepflo-homepage.png" alt="DeepFlo.App homepage" caption="DeepFlo.App - Voice to text that streams directly into any app" />
+
 ### Step 2: Download the App
 Click the download button for your operating system (Mac or Windows).
 
@@ -131,6 +137,8 @@ Setup takes about 60 seconds. DeepFlo.App runs quietly in the background until y
 Once installed, try activating DeepFlo.App and say: "Hello, this is a test."
 
 You should see your words appear as text. If it works, you're all set!
+
+<video src="/videos/deepflo-setup.mp4" caption="Quick demo: Setting up DeepFlo.App in 60 seconds" />
 
 ## You're Ready to Build
 
@@ -155,7 +163,11 @@ Let's take a calm, simple tour of Cursor. Remember: you only need to know about 
 
 When you open Cursor, you'll see a workspace that might look intimidating. Let's demystify it.
 
+<video src="/videos/cursor-overview.mp4" caption="Quick tour: The only parts of Cursor you need to know" />
+
 ## The Only Things You Need to Know
+
+<image src="/images/cursor-ide-code.png" alt="Cursor IDE with code" caption="This is what Cursor looks like with a project open - lots of stuff you can ignore!" />
 
 ### 1. The File Area (Left Side)
 This shows your project files—like folders on your computer. You might see file names that look like gibberish (index.html, App.jsx, etc.). 
@@ -166,7 +178,11 @@ This shows your project files—like folders on your computer. You might see fil
 This is where code appears. Again, you don't need to read or understand it. It's just the AI's work—like watching a chef cook in a kitchen. You don't need to know the recipe.
 
 ### 3. The Composer (The Important Part!)
-This is your conversation with the AI. You can open it by:
+This is your conversation with the AI. Look for the chat area on the right side:
+
+<image src="/images/cursor-chat-input.png" alt="Cursor Composer input" caption="The Composer - this is where you type (or speak) what you want to build" />
+
+You can open it by:
 - Looking for a chat icon
 - Clicking on the AI/Composer panel
 
@@ -223,6 +239,8 @@ In the next lesson, we'll create your very first project using just your words. 
 # Creating Your First Project
 
 Let's create something real in the next few minutes. This is where the magic happens!
+
+<video src="/videos/first-project.mp4" caption="Watch: Building your first project from start to finish" />
 
 ## Step 1: Start a New Project in Cursor
 
