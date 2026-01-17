@@ -3,7 +3,7 @@ import { modules } from '../data/lessons'
 import { useProgress } from '../hooks/useProgress'
 import { ProgressBar } from './ProgressBar'
 
-export function Sidebar({ isOpen, onClose }) {
+export function Sidebar({ isOpen, onClose, userName }) {
   const location = useLocation()
   const { isComplete, completedCount } = useProgress()
   const totalLessons = modules.reduce((acc, m) => acc + m.lessons.length, 0)
@@ -33,7 +33,9 @@ export function Sidebar({ isOpen, onClose }) {
           </div>
           <div>
             <h1 className="font-bold text-lg text-white">Cursor Course</h1>
-            <p className="text-xs text-slate-400">Master AI-powered coding</p>
+            <p className="text-xs text-slate-400">
+              {userName ? `Welcome, ${userName}!` : 'Master AI-powered coding'}
+            </p>
           </div>
         </NavLink>
       </div>

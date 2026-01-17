@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Sidebar } from './Sidebar'
 
-export function Layout({ children }) {
+export function Layout({ children, userName }) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
@@ -24,7 +24,7 @@ export function Layout({ children }) {
         />
       )}
 
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} userName={userName} />
       
       <main className="flex-1 lg:ml-72 p-4 lg:p-8 pt-16 lg:pt-8">
         <div className="max-w-4xl mx-auto">
